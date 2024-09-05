@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotel Reservation</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Book a Room</h1>
+        <form id="bookingForm">
+            <div class="form-group color">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+                <small id="nameError" class="error-message"></small>
+            </div>
+            <div class="form-group color">
+                <label for="phone">Phone Number:</label>
+                <input type="tel" id="phone" placeholder="05######## " name="phone" pattern="05\d{8}" required>
+                <small id="phoneError" class="error-message"></small>
+            </div>
+            <div class="form-group color">
+                <label for="startDate">Reservation Start Date:</label>
+                <input type="date" id="checkInDate" name="checkInDate" required>
+                <small id="startDateError" class="error-message"></small>
+            </div>
+            <div class="form-group color">
+                <label for="endDate">Reservation End Date:</label>
+                <input type="date" id="checkOutDate" name="checkOutDate" required>
+                <small id="endDateError" class="error-message"></small>
+            </div>
+            <div class="form-group color">
+                <label for="country">Country:</label>
+                <select id="country" name="country" required>
+                    <option value="">Select Country</option>
+                    <option value="Egypt">Egypt</option>
+                    <option value="Saudi Arabia">Saudi Arabia</option>
+                    <option value="The UAE">The UAE </option>
+                </select>
+                <small id="countryError" class="error-message"></small>
+            </div>
+            <div class="form-group color">
+                <label for="city">City:</label>
+                <select id="city" name="city" required>
+                    <option value="">Select City</option>
+                </select>
+                <small id="cityError" class="error-message"></small>
+            </div>
+            <div class="form-group color">
+                <label for="rooms">Number of Rooms:</label>
+                <input type="number" id="rooms" name="rooms" min="1" required>
+                <small id="roomsError" class="error-message"></small>
+            </div>
+            <button type="submit">Submit</button>
+            <button type="button" class="withe" onclick="resetForm()">Clear</button>
+        </form>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
